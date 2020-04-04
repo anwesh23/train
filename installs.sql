@@ -1,5 +1,5 @@
 CREATE TABLE passenger(
-  passenger_id INT(5) NOT NULL,
+  passenger_id INT(5) AUTO_INCREMENT NOT NULL,
   name VARCHAR(30) NOT NULL,
   gender CHAR NOT NULL,
   address VARCHAR(60) NOT NULL,
@@ -9,14 +9,14 @@ CREATE TABLE passenger(
 );
 
 CREATE TABLE train(
-  train_id int NOT NULL,
+  train_id int AUTO_INCREMENT NOT NULL,
   origin VARCHAR(30) NOT NULL,
   destination VARCHAR(30) NOT NULL,
   PRIMARY KEY(train_id)
 );
 
 CREATE TABLE trip(
-  trip_id INT(5) NOT NULL,
+  trip_id INT(5) AUTO_INCREMENT NOT NULL,
   train_id INT(5) NOT NULL,
   passenger_id INT(5) NOT NULL,
   date VARCHAR(30) NOT NULL,

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Train</title>
-    <?php require("header.php");?>
+    <?php require("includes/header.php");?>
   </head>
   <body>
   <?php
-    require("connect.php");
-    require("navbar.php");
+    require("includes/connect.php");
+    require("includes/navbar.php");
   ?>
 <br><br><br>
   <div class="container">
@@ -17,6 +17,7 @@
       <div class="card-body">
         <h5 class="card-title">Trains</h5>
 
+        <a href="newTrainForm.php" class="btn btn-success">Create New</a>
         <table class="table">
           <thead>
           <tr>
@@ -41,6 +42,6 @@
     </div>
   </div>
 
-  <?php require("footer.php");?>
+  <?php require("includes/footer.php");?>
   </body>
 </html>

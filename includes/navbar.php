@@ -10,10 +10,10 @@
         <a class="nav-link" href="index.php">Trains</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Passengers</a>
+        <a class="nav-link" href="passenger.php">Passengers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Trips</a>
+        <a class="nav-link" href="trips.php">Trips</a>
       </li>
     </ul>
     <ul class="navbar-nav mr-right">

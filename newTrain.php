@@ -6,7 +6,7 @@
     $sql = "INSERT INTO TRAIN (origin,destination) VALUES('$origin','$destination')";
     
     if($conn->query($sql) === TRUE){
-        header("Location: index.php");
+        header("Location: train.php");
     }else{
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

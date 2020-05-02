@@ -9,7 +9,7 @@
     $sql = "INSERT INTO PASSENGER (name,gender,address,age,contact_no) VALUES('$name','$gender','$address','$age','$contact_no')";
     
     if($conn->query($sql) === TRUE){
-        header("Location: passengerdx.php");
+        header("Location: passenger.php");
     }else{
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

@@ -3,39 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Passengers</title>
+    <title>Trip</title>
     <?php require("includes/header.php");?>
   </head>
   <body>
   <?php
     require("includes/connect.php");
-    require("includes/navbarphp");
+    require("includes/navbar.php");
   ?>
 <br><br><br>
   <div class="container">
     <div class="card" style="width:100%;">
       <div class="card-body">
-        <h5 class="card-title">Passengers</h5>
+        <h5 class="card-title">Trip</h5>
 
-        <a href="newPassengerForm.php" class="btn btn-success">Create New</a>
+        <a href="newTripForm.php" class="btn btn-success">Create New</a>
         <table class="table">
           <thead>
           <tr>
-            <th scope="col">Passenger Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Address</th>
-            <th scope="col">Age</th>
-            <th scope="col">Contact No</th>
+            <th scope="col">Trip Id</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Passenger Name</th>
           </tr>
         </thead>
         <tbody>
           <?php
-              $sql = "select * from passenger";
+              $sql = "select tri.trip_id, tra.train_id, tra.origin, tra.destination,p.passenger_id, p.name from trip tri, train tra, passenger p where tri.train_id = tra.train_id and tri.passenger_id = p.passenger_id";
               $result = $conn->query($sql);
 
               while($row = $result->fetch_assoc()){
-                echo "<tr><td>".$row['passenger_id']."</td><td>".$row['name']."</td><td>".$row['gender']."</td><td>".$row['address']."</td><td>".$row['age']."</td><td>".$row['contact_no']."</td></tr>";
+                echo "<tr><td>".$row['trip_id']."</td><td>".$row['origin']."</td><td>".$row['destination']."</td><td>".$row['name']."</td></tr>";
               }
            ?>
         </tbody>
